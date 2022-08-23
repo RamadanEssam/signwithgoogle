@@ -34,7 +34,7 @@ function App() {
 
 
     google.accounts.id.initialize({
-      client_id: "103903665720-4qf9ghrbkafp3veidblk5nur9ieqoqvn.apps.googleusercontent.com",
+      client_id: "412363476161-hut6pk6tneg2uhtvpn4275upipeh6k9i.apps.googleusercontent.com",
       callback: handleCredentialResponse
     });
     google.accounts.id.renderButton(

@@ -5,8 +5,8 @@ class chanal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            YOUTUBE_Chanal_API: 'https://youtube.googleapis.com/youtube/v3/playlists?',
-            YOUTUBE_API_KEY:"AIzaSyBLm6It2O6W9Ye8QvUHORSFir5Df4-LzM0",
+            YOUTUBE_Chanal_API: 'https://youtube.googleapis.com/youtube/v3/playlists',
+            YOUTUBE_API_KEY:"AIzaSyB9KZstVLsWtEmGaRg8ZGaQOlk3MsjqiaM",
             CHANAL_ID: "UChdtNMMOWKkw9-YWg64K07w",
             PART: "snippet",
             //  CLIENT_ID:"843723490431-v5jj3fbkmscmi08h0jd8njguetdjqktd.apps.googleusercontent.com",
@@ -15,7 +15,7 @@ class chanal extends Component {
         }
     }
     getData = async () => {
-        await axios.get(`${this.state.YOUTUBE_Chanal_API}part=snippet&channelId=${this.state.CHANAL_ID}&maxResults=25&key=${this.state.YOUTUBE_API_KEY}`).then(res => {
+        await axios.get(`${this.state.YOUTUBE_Chanal_API}?part=snippet&channelId=${this.state.CHANAL_ID}&maxResults=25&key=${this.state.YOUTUBE_API_KEY}`).then(res => {
             console.log(res);
             this.setState({ videoItems: res.data.items })
         }).catch(err => { console.log(err); });
